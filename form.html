@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: auto;
+            background: linear-gradient(to bottom right, #ff4ecd, #ffa6f6);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        }
+
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        input, select, textarea {
+            margin: 8px 0;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            width: 95%;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+        table {
+            width: 100%;
+            margin-top: 10px;
+            background: #fff;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 6px;
+        }
+
+        th {
+            background: #f7f7f7;
+        }
+
+        .form-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        input[type="submit"] {
+            background: #ff1493;
+            color: #fff;
+        }
+
+        input[type="reset"] {
+            background: #ccc;
+            color: #333;
+        }
+
+        .form-section {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+
+    <div class="form-container">
+        <form>
+            <!-- Name -->
+            <div class="form-section">
+                <label>First Name:</label>
+                <input type="text" name="firstname" placeholder="Enter first name">
+                <label>Last Name:</label>
+                <input type="text" name="lastname" placeholder="Enter last name">
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-section">
+                <label>Date of Birth:</label><br>
+                <select name="day">
+                    <option>Day</option>
+                    <option>1</option><option>2</option><option>3</option>
+                </select>
+                <select name="month">
+                    <option>Month</option>
+                    <option>January</option><option>February</option><option>March</option>
+                </select>
+                <select name="year">
+                    <option>Year</option>
+                    <option>2000</option><option>2001</option><option>2002</option>
+                </select>
+            </div>
+
+            <!-- Email & Mobile -->
+            <div class="form-section">
+                <label>Email ID:</label>
+                <input type="email" name="email" placeholder="Enter email address">
+                <label>Mobile Number:</label>
+                <input type="text" name="mobile" placeholder="Enter 10-digit mobile number">
+            </div>
+
+            <!-- Gender -->
+            <div class="form-section">
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+
+            <!-- Address -->
+            <div class="form-section">
+                <label>Address:</label><br>
+                <textarea name="address" rows="3" placeholder="Enter your full address"></textarea>
+            </div>
+
+            <!-- City, Pin, State -->
+            <div class="form-section">
+                <label>City:</label>
+                <input type="text" name="city" placeholder="Enter city">
+                <label>PIN Code:</label>
+                <input type="text" name="pincode" placeholder="Enter 6-digit PIN code">
+                <label>State:</label>
+                <input type="text" name="state" placeholder="Enter state">
+            </div>
+
+            <!-- Country -->
+            <div class="form-section">
+                <label>Country:</label>
+                <select name="country">
+                    <option>Select country</option>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                </select>
+            </div>
+
+            <!-- Hobbies -->
+            <div class="form-section">
+                <label>Hobbies:</label><br>
+                <input type="checkbox" name="hobby" value="Drawing"> Drawing
+                <input type="checkbox" name="hobby" value="Singing"> Singing
+                <input type="checkbox" name="hobby" value="Dancing"> Dancing
+                <input type="checkbox" name="hobby" value="Sketching"> Sketching
+                <input type="checkbox" name="hobby" value="Others"> Others
+            </div>
+
+            <!-- Qualification Table -->
+            <div class="form-section">
+                <label>Qualification:</label>
+                <table>
+                    <tr>
+                        <th>S. No.</th>
+                        <th>Examination</th>
+                        <th>Board</th>
+                        <th>Percentage</th>
+                        <th>Year of Passing</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Class X</td>
+                        <td><input type="text" name="board1"></td>
+                        <td><input type="text" name="percentage1"></td>
+                        <td><input type="text" name="year1"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Class XII</td>
+                        <td><input type="text" name="board2"></td>
+                        <td><input type="text" name="percentage2"></td>
+                        <td><input type="text" name="year2"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Graduation</td>
+                        <td><input type="text" name="board3"></td>
+                        <td><input type="text" name="percentage3"></td>
+                        <td><input type="text" name="year3"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Masters</td>
+                        <td><input type="text" name="board4"></td>
+                        <td><input type="text" name="percentage4"></td>
+                        <td><input type="text" name="year4"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Courses -->
+            <div class="form-section">
+                <label>Courses Applied For:</label><br>
+                <input type="radio" name="course" value="BCA"> BCA
+                <input type="radio" name="course" value="B.Com"> B.Com
+                <input type="radio" name="course" value="B.Sc"> B.Sc
+                <input type="radio" name="course" value="B.A"> B.A
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-buttons">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
