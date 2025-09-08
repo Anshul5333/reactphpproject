@@ -1,230 +1,354 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Student Registration Form</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f3f4f6;
-            margin: 0;
-            padding: 20px;
-        }
+      .head {
+        color: rgb(17, 46, 233);
+        text-align: center;
+        font-weight: bold;
+        font-size: 23px;
+      }
+      .header {
+        background: linear-gradient(to right, #8a2be2, #ff1493);
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 8px 8px 0px 0px;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+        max-width: 700px;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: #f3f4f6;
+        margin: 0;
+        padding: 20px;
+      }
 
-        h2 {
-            text-align: center;
-            color: #444;
-            margin-bottom: 20px;
-        }
+      h2 {
+        text-align: center;
+        color: #444;
+        margin-bottom: 20px;
+      }
 
-        .form-container {
-            max-width: 700px;
-            margin: auto;
-            background: linear-gradient(to bottom right, #ff4ecd, #ffa6f6);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-        }
+      .form-container {
+        max-width: 700px;
+        margin: auto;
+        background: linear-gradient(to bottom right, #ffffffff, #fbfbfb);
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      footer{
+         max-width: 736px;
+        margin: auto;
+        background: linear-gradient(to bottom right, #ffffffff, #fbfbfb);
+        padding: 10px;
+      margin-top: 9px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      form {
+        margin-left: 20px;
+      }
 
-        label {
-            font-weight: bold;
-            margin-right: 10px;
-        }
+      label {
+        font-weight: bold;
+        margin-right: 10px;
+      }
 
-        input, select, textarea {
-            margin: 8px 0;
-            padding: 8px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            width: 95%;
-        }
+      input,
+      select,
+      textarea {
+        margin: 8px 0;
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        width: 95%;
+      }
 
-        input[type="radio"], input[type="checkbox"] {
-            width: auto;
-        }
-        table {
-            width: 100%;
-            margin-top: 10px;
-            background: #fff;
-        }
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: auto;
+      }
+      table {
+        width: 100%;
+        margin-top: 10px;
+        background: #fff;
+      }
 
-        table, th, td {
-            border: 1px solid #ccc;
-            text-align: center;
-            padding: 6px;
-        }
+      table,
+      th,
+      td {
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 6px;
+      }
 
-        th {
-            background: #f7f7f7;
-        }
+      th {
+        background: #f7f7f7;
+      }
 
-        .form-buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
+      .form-buttons {
+        text-align: center;
+        margin-top: 20px;
+      }
 
-        input[type="submit"], input[type="reset"] {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            margin: 5px;
-        }
+      input[type="submit"],
+      input[type="reset"] {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 5px;
+      }
 
-        input[type="submit"] {
-            background: #ff1493;
-            color: #fff;
-        }
+      input[type="submit"] {
+        background: #ff1493;
+        color: #fff;
+      }
 
-        input[type="reset"] {
-            background: #ccc;
-            color: #333;
-        }
+      input[type="reset"] {
+        background: #ccc;
+        color: #333;
+      }
 
-        .form-section {
-            margin-bottom: 15px;
-        }
+      .form-section {
+        margin-bottom: 15px;
+      }
+      .button-container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 20px;
+        background: #fdf5ff;
+      }
+
+      .btn-reset {
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        background: white;
+        color: #333;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .btn-submit {
+        padding: 10px 20px;
+        border: none;
+        background: linear-gradient(to right, #8a2be2, #ff1493);
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .footer {
+        background: linear-gradient(to bottom right, #ffffffff, #fbfbfb);
+        color: #008060;
+        text-align: center;
+        
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        width: 500px;
+        margin: 30px auto;
+      }
     </style>
-</head>
-<body>
-    <h2>Student Registration Form</h2>
-
-    <div class="form-container">
+  </head>
+  <body>
+    <header>
+      <div class="head">Morden Registration Form</div>
+    </header>
+    <main>
+      <div class="form-container">
+        <div class="header">Student Registration Form</div>
         <form>
-            <!-- Name -->
-            <div class="form-section">
-                <label>First Name:</label>
-                <input type="text" name="firstname" placeholder="Enter first name">
-                <label>Last Name:</label>
-                <input type="text" name="lastname" placeholder="Enter last name">
-            </div>
+          <!-- Name -->
+          <div class="form-section">
+            <label>First Name:</label>
+            <input
+              type="text"
+              name="firstname"
+              placeholder="Enter first name"
+              required
+            />
+            <label>Last Name:</label>
+            <input
+              type="text"
+              name="lastname"
+              placeholder="Enter last name"
+              required
+            />
+          </div>
 
-            <!-- Date of Birth -->
-            <div class="form-section">
-                <label>Date of Birth:</label><br>
-                <select name="day">
-                    <option>Day</option>
-                    <option>1</option><option>2</option><option>3</option>
-                </select>
-                <select name="month">
-                    <option>Month</option>
-                    <option>January</option><option>February</option><option>March</option>
-                </select>
-                <select name="year">
-                    <option>Year</option>
-                    <option>2000</option><option>2001</option><option>2002</option>
-                </select>
-            </div>
+          <!-- Date of Birth -->
+          <div class="form-section">
+            <label>Date of Birth:</label><br />
+            <select name="day" required>
+              <option value="">Day</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            <select name="month" required>
+              <option value="">Month</option>
+              <option>January</option>
+              <option>February</option>
+              <option>March</option>
+            </select>
+            <select name="year" required>
+              <option value="">Year</option>
+              <option>2000</option>
+              <option>2001</option>
+              <option>2002</option>
+            </select>
+          </div>
 
-            <!-- Email & Mobile -->
-            <div class="form-section">
-                <label>Email ID:</label>
-                <input type="email" name="email" placeholder="Enter email address">
-                <label>Mobile Number:</label>
-                <input type="text" name="mobile" placeholder="Enter 10-digit mobile number">
-            </div>
+          <!-- Email & Mobile -->
+          <div class="form-section">
+            <label>Email ID:</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter email address"
+              required
+            />
+            <label>Mobile Number:</label>
+            <input
+              type="text"
+              name="mobile"
+              placeholder="Enter 10-digit mobile number"
+              pattern="\d{10}"
+              title="Enter a valid 10-digit mobile number"
+              required
+            />
+          </div>
 
-            <!-- Gender -->
-            <div class="form-section">
-                <label>Gender:</label>
-                <input type="radio" name="gender" value="Male"> Male
-                <input type="radio" name="gender" value="Female"> Female
-            </div>
+          <!-- Gender -->
+          <div class="form-section">
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" required /> Male
+            <input type="radio" name="gender" value="Female" required /> Female
+          </div>
 
-            <!-- Address -->
-            <div class="form-section">
-                <label>Address:</label><br>
-                <textarea name="address" rows="3" placeholder="Enter your full address"></textarea>
-            </div>
+          <!-- Address -->
+          <div class="form-section">
+            <label>Address:</label><br />
+            <textarea
+              name="address"
+              rows="3"
+              placeholder="Enter your full address"
+              required
+            ></textarea>
+          </div>
 
-            <!-- City, Pin, State -->
-            <div class="form-section">
-                <label>City:</label>
-                <input type="text" name="city" placeholder="Enter city">
-                <label>PIN Code:</label>
-                <input type="text" name="pincode" placeholder="Enter 6-digit PIN code">
-                <label>State:</label>
-                <input type="text" name="state" placeholder="Enter state">
-            </div>
+          <!-- City, Pin, State -->
+          <div class="form-section">
+            <label>City:</label>
+            <input type="text" name="city" placeholder="Enter city" required />
+            <label>PIN Code:</label>
+            <input
+              type="text"
+              name="pincode"
+              placeholder="Enter 6-digit PIN code"
+              pattern="\d{6}"
+              title="Enter a valid 6-digit PIN code"
+              required
+            />
+            <label>State:</label>
+            <input type="text" name="state" placeholder="Enter state" required />
+          </div>
 
-            <!-- Country -->
-            <div class="form-section">
-                <label>Country:</label>
-                <select name="country">
-                    <option>Select country</option>
-                    <option>India</option>
-                    <option>USA</option>
-                    <option>UK</option>
-                </select>
-            </div>
+          <!-- Country -->
+          <div class="form-section">
+            <label>Country:</label>
+            <select name="country" required>
+              <option value="">Select country</option>
+              <option>India</option>
+              <option>USA</option>
+              <option>UK</option>
+            </select>
+          </div>
 
-            <!-- Hobbies -->
-            <div class="form-section">
-                <label>Hobbies:</label><br>
-                <input type="checkbox" name="hobby" value="Drawing"> Drawing
-                <input type="checkbox" name="hobby" value="Singing"> Singing
-                <input type="checkbox" name="hobby" value="Dancing"> Dancing
-                <input type="checkbox" name="hobby" value="Sketching"> Sketching
-                <input type="checkbox" name="hobby" value="Others"> Others
-            </div>
+          <!-- Hobbies -->
+          <div class="form-section">
+            <label>Hobbies:</label><br />
+            <input type="checkbox" name="hobby" value="Drawing" /> Drawing
+            <input type="checkbox" name="hobby" value="Singing" /> Singing
+            <input type="checkbox" name="hobby" value="Dancing" /> Dancing
+            <input type="checkbox" name="hobby" value="Sketching" /> Sketching
+            <input type="checkbox" name="hobby" value="Others" /> Others
+          </div>
 
-            <!-- Qualification Table -->
-            <div class="form-section">
-                <label>Qualification:</label>
-                <table>
-                    <tr>
-                        <th>S. No.</th>
-                        <th>Examination</th>
-                        <th>Board</th>
-                        <th>Percentage</th>
-                        <th>Year of Passing</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Class X</td>
-                        <td><input type="text" name="board1"></td>
-                        <td><input type="text" name="percentage1"></td>
-                        <td><input type="text" name="year1"></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Class XII</td>
-                        <td><input type="text" name="board2"></td>
-                        <td><input type="text" name="percentage2"></td>
-                        <td><input type="text" name="year2"></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Graduation</td>
-                        <td><input type="text" name="board3"></td>
-                        <td><input type="text" name="percentage3"></td>
-                        <td><input type="text" name="year3"></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Masters</td>
-                        <td><input type="text" name="board4"></td>
-                        <td><input type="text" name="percentage4"></td>
-                        <td><input type="text" name="year4"></td>
-                    </tr>
-                </table>
-            </div>
+          <!-- Qualification Table -->
+          <div class="form-section">
+            <label>Qualification:</label>
+            <table>
+              <tr>
+                <th>S. No.</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text" name="board1" required /></td>
+                <td><input type="number" name="percentage1" min="0" max="100" required /></td>
+                <td><input type="number" name="year1" min="1900" max="2099" required /></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text" name="board2" required /></td>
+                <td><input type="number" name="percentage2" min="0" max="100" required /></td>
+                <td><input type="number" name="year2" min="1900" max="2099" required /></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Graduation</td>
+                <td><input type="text" name="board3" /></td>
+                <td><input type="number" name="percentage3" min="0" max="100" /></td>
+                <td><input type="number" name="year3" min="1900" max="2099" /></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Masters</td>
+                <td><input type="text" name="board4" /></td>
+                <td><input type="number" name="percentage4" min="0" max="100" /></td>
+                <td><input type="number" name="year4" min="1900" max="2099" /></td>
+              </tr>
+            </table>
+          </div>
 
-            <!-- Courses -->
-            <div class="form-section">
-                <label>Courses Applied For:</label><br>
-                <input type="radio" name="course" value="BCA"> BCA
-                <input type="radio" name="course" value="B.Com"> B.Com
-                <input type="radio" name="course" value="B.Sc"> B.Sc
-                <input type="radio" name="course" value="B.A"> B.A
-            </div>
-
-            <!-- Buttons -->
-            <div class="form-buttons">
-                <input type="reset" value="Reset">
-                <input type="submit" value="Submit">
-            </div>
+          <!-- Courses -->
+          <div class="form-section">
+            <label>Courses Applied For:</label><br />
+            <input type="radio" name="course" value="BCA" required /> BCA
+            <input type="radio" name="course" value="B.Com" required /> B.Com
+            <input type="radio" name="course" value="B.Sc" required /> B.Sc
+            <input type="radio" name="course" value="B.A" required /> B.A
+          </div>
+          <!-- Buttons -->
+          <div class="button-container">
+            <button class="btn-reset">Reset</button>
+            <button class="btn-submit">Submit</button>
+          </div>
         </form>
-    </div>
-</body>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">Professional Registration Form</div>
+    </footer>
+  </body>
 </html>
