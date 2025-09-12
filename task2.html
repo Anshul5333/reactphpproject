@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Timeline</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 50px 20px;
+      }
+
+      .timeline-container {
+       
+        position: relative;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Timeline horizontal line */
+      .timeline-line {
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: linear-gradient(
+          90deg,
+          #22c55e 0%,
+          #0ea5e9 25%,
+          #0ea5e9 75%,
+          #3b82f6 100%
+        );
+      }
+
+      /* Timeline items container */
+      .timeline-items {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2;
+        gap: 40px;
+      }
+
+      /* Individual timeline item */
+      .timeline-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px;
+        position: relative;
+
+        background-color: #ffffff;
+        width: 20%;
+        margin-top: 2px;
+      }
+
+      /* Timeline dots */
+      .timeline-dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-bottom: 25px;
+
+        z-index: 3;
+        position: relative;
+      }
+
+      .dot-green {
+        background-color: #22c55e;
+      }
+
+      .dot-blue {
+        background-color: #0ea5e9;
+      }
+
+      .dot-dark-blue {
+        background-color: #3b82f6;
+      }
+
+      /* Year styling */
+      .timeline-year {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        letter-spacing: -0.5px;
+      }
+
+      .dot{
+        display: flex;
+        justify-content: space-around;
+      }
+      .year-green {
+        color: #22c55e;
+      }
+
+      .year-blue {
+        color: #0ea5e9;
+      }
+
+      .year-dark-blue {
+        color: #3b82f6;
+      }
+
+      /* Description text */
+      .timeline-description {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #666;
+        max-width: 200px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dot">
+      <div class="timeline-dot dot-green"></div>
+      <div class="timeline-dot dot-blue"></div>
+      <div class="timeline-dot dot-blue"></div>
+      <div class="timeline-dot dot-dark-blue"></div>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <div class="timeline-year year-green">1982</div>
+          <div class="timeline-description">
+            Started as Medical Representative at Bevit Pharmaceuticals.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year year-blue">1987</div>
+          <div class="timeline-description">
+            Promoted to Area Manager, expanded Karnataka operations.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year year-blue">1994</div>
+          <div class="timeline-description">
+            Became Regional Manager, led 25-member team.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year year-dark-blue">1998</div>
+          <div class="timeline-description">
+            Assigned Maharashtra region for business expansion.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
